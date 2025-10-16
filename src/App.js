@@ -7,8 +7,8 @@ class App {
     MissionUtils.Console.print(`결과 : ${result}`);
   }
 
-  calculate(){
-
+  calculate(input){
+    const customDeli = input.match(/^\/\/(.)\\n(.*)$/);
   }
 }
 
