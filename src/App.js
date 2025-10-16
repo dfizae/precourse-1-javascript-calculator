@@ -9,6 +9,13 @@ class App {
 
   calculate(input){
     const customDeli = input.match(/^\/\/(.)\\n(.*)$/);
+    let deli = [":", ","];
+    let numStr = "";
+
+    if(customDeli){
+      deli.push(customDeli[1]);
+      numStr = customDeli[2];
+    }
   }
 }
 
