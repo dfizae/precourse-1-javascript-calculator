@@ -56,14 +56,17 @@
 
 #### 출력
     - 덧셈 결과
+    
     ```javascript
     결과 : 6
+    ```
 
 ### 💻 실행 결과 예시
     ```javascript
     덧셈할 문자열을 입력해 주세요.
     1,2:3
     결과 : 6
+    ```
 
 <br>
 
@@ -76,6 +79,7 @@
     - 자바스크립트 코드 컨벤션을 지키면서 프로그래밍한다.
         - 기본적으로 [JavaScript Style Guide](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/javascript)를 원칙으로 한다.
 <br>
+
 ### 라이브러리
 - @woowacourse/mission-utils에서 제공하는 Console API를 사용하여 구현해야 한다.
     - 사용자의 값을 입력 및 출력하려면 Console.readLineAsync()와 Console.print()를 활용한다.
