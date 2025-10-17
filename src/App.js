@@ -8,6 +8,7 @@ class App {
   }
 
   calculate(input){
+
     const customDeli = input.match(/^\/\/(.)\\n(.*)$/);
     let deli = [":", ","];
     let numStr = "";
@@ -17,10 +18,13 @@ class App {
       numStr = customDeli[2];
     }
 
-    const seperate = numStr.split(new RegExp([`${deli.join("")}`]));
+    const seperate = numStr.split(new RegExp(`[${deli.join("")}]`));
     
     let numbers = seperate.map((n) => {
       let num = Number(n);
+      if(num < 0 || isNaN(num)){
+        throw new Error("[ERROR]");
+      }
       return num;
     });
   
