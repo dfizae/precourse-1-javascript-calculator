@@ -16,6 +16,13 @@ class App {
       deli.push(customDeli[1]);
       numStr = customDeli[2];
     }
+
+    const seperate = numStr.split(new RegExp(deli.join("")));
+    
+    let numbers = seperate.map((n) => {
+      let num = Number(n);
+      return num;
+    });
   }
 }
 
