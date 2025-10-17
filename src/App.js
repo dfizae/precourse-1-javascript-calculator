@@ -11,7 +11,7 @@ class App {
 
     const customDeli = input.match(/^\/\/(.)\\n(.*)$/);
     let deli = [":", ","];
-    let numStr = "";
+    let numStr = input;
 
     if(customDeli){
       deli.push(customDeli[1]);
@@ -28,7 +28,7 @@ class App {
       return num;
     });
   
-  return numbers.reduce((a, b) => a + b, 0);
+  return numbers.reduce((a, b) => a+b, 0);
 
   }
 }
