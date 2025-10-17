@@ -23,6 +23,9 @@ class App {
       let num = Number(n);
       return num;
     });
+  
+  return numbers.reduce((a, b) => {a + b}, 0);
+
   }
 }
 
