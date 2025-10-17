@@ -17,14 +17,14 @@ class App {
       numStr = customDeli[2];
     }
 
-    const seperate = numStr.split(new RegExp(deli.join("")));
+    const seperate = numStr.split(new RegExp([`${deli.join("")}`]));
     
     let numbers = seperate.map((n) => {
       let num = Number(n);
       return num;
     });
   
-  return numbers.reduce((a, b) => {a + b}, 0);
+  return numbers.reduce((a, b) => a + b, 0);
 
   }
 }
