@@ -9,12 +9,22 @@ class App {
 
   calculate(input){
 
-    const customDeli = input.match(/^\/\/(.)\\n(.*)$/);
+    if(!input) return 0;
+
+    const customDeli = input.match(/^\/\/(.*)\\n(.*)$/);
     let deli = [":", ","];
     let numStr = input;
 
     if(customDeli){
-      deli.push(customDeli[1]);
+      if(customDeli[1].length == 1){
+        deli.push(customDeli[1]);
+      }
+      else{
+        let multiDeli = customDeli[1].split('');
+        for(let x of multiDeli){
+          deli.push(x);
+        }
+      }
       numStr = customDeli[2];
     }
 
