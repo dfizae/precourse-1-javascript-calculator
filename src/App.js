@@ -9,7 +9,7 @@ class App {
 
   calculate(input){
 
-    if(!input) return 0;
+    if(!input || input.trim() === "") return 0;
 
     const customDeli = input.match(/^\/\/(.*)\\n(.*)$/);
     let deli = [":", ","];
