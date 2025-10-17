@@ -32,8 +32,10 @@ class App {
     
     let numbers = seperate.map((n) => {
       let num = Number(n);
-      if(num < 0 || isNaN(num)){
+      if(isNaN(num)){
         throw new Error("[ERROR]");
+      } else if(num < 0){
+        throw new Error("[ERROR] 음수는 허용되지 않는다.")
       }
       return num;
     });
